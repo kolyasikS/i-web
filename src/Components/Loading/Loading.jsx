@@ -6,6 +6,7 @@ const Loading = () => {
     const progressBar = useRef();
     //const firstRender = useRef(1);
     useEffect(() => {
+        console.log(progressBar.current);
         let progress = 0;
         let intervalID = setInterval(() => {
             progressBar.current.style.transform = `translateX(${progress++ / 5}%)`;

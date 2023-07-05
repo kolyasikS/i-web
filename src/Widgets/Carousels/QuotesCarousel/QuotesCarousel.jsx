@@ -15,7 +15,6 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
     const innerRef = useRef();
     const transitionTimeoutID = useRef(0);
     const intervalID = useRef(0);
-    const isFirstRender = useRef(true);
     const [prevSlider, setPrevSlider] = useState([]);
     const [transitionDuration, setTransitionDuration] = useState(1000);
     const [isHover, setIsHover] = useState(false);
@@ -52,10 +51,9 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         }
     }, [widthScreen])
     useEffect(() => {
-        /*if (isFirstRender.current) {
+        if (!sizeItem) {
             return;
-        }*/
-
+        }
         if (currSlider < 2) {
             let offset = widthScreen / 2 - (sizeItem.width / 2)  - (currSlider) * (sizeItem.width + marginLeftItem);
             setOffset(offset);
@@ -93,9 +91,6 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         return itemsWithClones;
     }
     const sliderToRight = (newSlide) => {
-/*
-        isFirstRender.current = false;
-*/
         if (!transitionDuration) {
             setTransitionDuration(1000);
         }
@@ -108,9 +103,6 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         }
     };
     const sliderToLeft = (newSlide) => {
-/*
-        isFirstRender.current = false;
-*/
         if (!transitionDuration) {
             setTransitionDuration(1000);
         }

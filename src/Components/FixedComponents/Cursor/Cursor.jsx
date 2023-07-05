@@ -2,7 +2,6 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import './Cursor.scss';
 
 const Cursor = () => {
-    const firstRender = useRef(1);
     const [pos, setPos] = useState({});
     const [cursorHover, setCursorHover] = useState(false);
     const mouseMove = useCallback((e) => {
