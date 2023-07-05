@@ -108,6 +108,7 @@
 
 .pace-progress {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0,0,0);
     max-width: 300px;
     position: fixed;
     z-index: 99999999;
