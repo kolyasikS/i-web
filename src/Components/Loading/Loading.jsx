@@ -12,7 +12,7 @@ const Loading = () => {
         }
         let progress = 0;
         let intervalID = setInterval(() => {
-            progressBar.current.style.transform = `translate3d(${progress++ / 5}%, 0, 0)`;
+            progressBar.current.style.transform = `translateX(${progress++ / 5}%)`;
             if (progress > 500) {
                 clearInterval(intervalID);
                 setTimeout(() => {
