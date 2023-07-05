@@ -17,9 +17,7 @@ function App() {
     const [menuVisible, setMenuVisible] = useState(null);
     return (
       <>
-{/*
           <Loading/>
-*/}
           <Cursor/>
           <Header setMenuVisible={setMenuVisible} menuVisible={menuVisible}/>
           <Introduction/>
