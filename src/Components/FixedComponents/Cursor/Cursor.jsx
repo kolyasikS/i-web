@@ -9,10 +9,6 @@ const Cursor = () => {
         setPos({left: e.clientX, top: e.clientY});
     }, [cursorHover]);
     useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = 0;
-            return;
-        }
         let links = document.querySelectorAll('a');
         links.forEach(item => {
             item.addEventListener('mouseenter', () => {

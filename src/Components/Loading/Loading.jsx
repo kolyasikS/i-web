@@ -4,12 +4,8 @@ import './Loading.scss';
 const Loading = () => {
     const [isDone, setIsDone] = useState(false);
     const progressBar = useRef();
-    const firstRender = useRef(1);
+    //const firstRender = useRef(1);
     useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = 0;
-            return;
-        }
         let progress = 0;
         let intervalID = setInterval(() => {
             progressBar.current.style.transform = `translateX(${progress++ / 5}%)`;

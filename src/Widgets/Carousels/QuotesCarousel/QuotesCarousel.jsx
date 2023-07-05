@@ -52,9 +52,9 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         }
     }, [widthScreen])
     useEffect(() => {
-        if (isFirstRender.current) {
+        /*if (isFirstRender.current) {
             return;
-        }
+        }*/
 
         if (currSlider < 2) {
             let offset = widthScreen / 2 - (sizeItem.width / 2)  - (currSlider) * (sizeItem.width + marginLeftItem);
@@ -93,7 +93,9 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         return itemsWithClones;
     }
     const sliderToRight = (newSlide) => {
+/*
         isFirstRender.current = false;
+*/
         if (!transitionDuration) {
             setTransitionDuration(1000);
         }
@@ -106,7 +108,9 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
         }
     };
     const sliderToLeft = (newSlide) => {
+/*
         isFirstRender.current = false;
+*/
         if (!transitionDuration) {
             setTransitionDuration(1000);
         }
