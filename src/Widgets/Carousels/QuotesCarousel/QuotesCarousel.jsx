@@ -20,15 +20,28 @@ const QuotesCarousel = ({items, widthItem, heightItem}) => {
     const [transitionDuration, setTransitionDuration] = useState(1000);
     const [isHover, setIsHover] = useState(false);
     useEffect(() => {
-        if (isHover) {
+        if (intervalID.current) {
+            console.log('intID-2', intervalID.current);
             clearInterval(intervalID.current);
+            intervalID.current = 0;        }
+
+        if (isHover) {
+            console.log('intID-2', intervalID.current);
+            clearInterval(intervalID.current);
+            intervalID.current = 0;
         } else {
+            let x = currSlider;
             intervalID.current = setInterval(() => {
-                sliderToRight();
+                sliderToRight(++x);
+                if (x === 16) {
+                    x = 2
+                }
             }, 3000);
+            console.log('intID-1', intervalID.current);
         }
     }, [isHover]);
-    useEffect(() => {
+    useEffect(() =>
+    {
         const sizeItem = window.outerWidth * 0.45;
         setSizeItem({width: sizeItem});//, height: sizeItem.height});
     }, []);
