@@ -1,0 +1,70 @@
+@import 'src/Assets/css/mixins.scss';
+
+.quote-item {
+    background: linear-gradient(126.47deg, #18191d 6.69%, rgba(2, 2, 30, 0) 85.43%);
+    @include flexCenter;
+    align-items: flex-start;
+    transition: all .4s;
+    padding-top: 40px;
+}
+.quote-item__inner {
+    display: flex;
+    padding: 30px 15px 30px 30px;
+    user-select: none;
+}
+.quote-author {
+    max-width: 25%;
+    padding-right: 20px;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        height: 100%;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+}
+.quote-author__img {
+    width: 75px;
+    height: 75px;
+    border: 7px solid #25262c;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    user-select: none;
+    pointer-events: none;
+}
+.facebook-link {
+    img {
+        width: 90%;
+    }
+}
+.quote-author__name {
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-clip: text;
+    color: transparent;
+    font-size: 15px;
+    font-weight: 800;
+}
+.quote-text {
+    width: 80%;
+    img {
+        width: 20px;
+        display: inline-block;
+        position: relative;
+        top: -5px;
+    }
+    padding-left: 20px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 35px;
+}
+.prev-item {
+    transform: scale(0.9);
+}
+

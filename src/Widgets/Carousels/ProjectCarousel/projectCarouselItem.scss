@@ -1,0 +1,105 @@
+.projectCarouselItem {
+    position: relative;
+    user-select: none;
+}
+.information {
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.information__subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+
+    position: relative;
+    top: -20px;
+    transition: all 0.7s;
+    transition-delay: 0.5s;
+    opacity: 0;
+
+    &.active {
+        top: 0px;
+        opacity: 1;
+
+        &.border-slide {
+            transition: all 0s;
+            transition-delay: 0s;
+            opacity: 1;
+        }
+    }
+}
+.information__title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.4;
+
+    position: relative;
+    top: 20px;
+    transition: all 0.7s;
+    transition-delay: 0.5s;
+    opacity: 0;
+
+
+    &.active {
+        top: 0px;
+        opacity: 1;
+
+        &.border-slide {
+            transition: all 0s;
+            transition-delay: 0s;
+            opacity: 1;
+        }
+    }
+}
+.projectItem__link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    a {
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+        background: #fff;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        &:hover {
+            svg {
+                position: relative;
+                right: 7px;
+            }
+        }
+    }
+}
+.brn-wrapper {
+    transition: all 0.7s;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    &.show {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+.video {
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+}

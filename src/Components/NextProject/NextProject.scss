@@ -1,0 +1,49 @@
+@import 'src/Assets/css/mixins';
+
+.nextProject {
+    background-image: url("https://i-web.top/wp-content/uploads/2022/05/patrn.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    @include flexCenter;
+}
+.nextProject__inner {
+    width: 100%;
+    @include flexCenter;
+    justify-content: flex-start;
+    padding: 40px 0 40px 180px;
+}
+.nextProject__inner-text {
+    visibility: hidden;
+    & h6 {
+        color: #12c2e9;
+        font-size: 11px;
+        letter-spacing: 4px;
+        display: inline-block;
+    }
+    & h2 .top {
+        font-weight: 800;
+        font-size: 5.8vw;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+        color: transparent;
+    }
+    & h2 .bottom.wrapper{
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        font-weight: 800;
+        width: fit-content;
+        font-size: 5.6vw;
+        line-height: 1.2;
+        text-transform: uppercase;
+        -webkit-text-stroke-color: #fff;
+        display: inline-block;
+    }
+    &.show {
+        visibility: visible;
+    }
+}
+.h2.bottom {
+}

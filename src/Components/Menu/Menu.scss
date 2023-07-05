@@ -1,0 +1,179 @@
+@import 'src/Assets/css/mixins';
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.i-web.top/wp-content/uploads/2022/08/colorful-abstract-nebula-space-background-scaled.jpg);
+    background-size: cover;
+    background-position: 0% 80%;
+    padding: 120px 30px 30px;
+    overflow: hidden;
+    z-index: 9999;
+    transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
+    @include flexCenter;
+    align-items: flex-start;
+
+    &.open {
+        animation: show 1s ease-in forwards;
+
+        & .menu-contacts-office {
+            top: 0px;
+            opacity: 1;
+        }
+
+        & .menu-contacts-col {
+            top: 0px;
+            opacity: 1;
+
+            &::before {
+                min-height: 100vh;
+            }
+        }
+    }
+    &.closed {
+        animation: fade-away 1.8s ease-in forwards;
+
+        & .menu-contacts-office {
+            top: -20px;
+            opacity: 0;
+            transition-delay: 0s;
+        }
+        & .menu-contacts-col {
+
+
+            &::before {
+                height: 0;
+                min-height: 0;
+                transition-delay: 0s;
+            }
+        }
+    }
+}
+@keyframes show {
+    0% {
+        left: -100%;
+    }
+    45% {
+        left: -95%;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes fade-away {
+    0% {
+        left: 0%;
+    }
+    45% {
+        left: 0%;
+    }
+    75% {
+        left: -2%;
+    }
+    100% {
+        left: -100;
+    }
+}
+.menu-container {
+    @include flexCenter;
+    vertical-align: top;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 70px 90px 25px;
+}
+.menu-options-wrapper {
+    width: 50%;
+    overflow: hidden;
+}
+.menu-options-item {
+    width: fit-content;
+    transition: all 0.2s;
+    a {
+        span.num {
+            opacity: 0.8;
+            font-size: 11px;
+            margin-right: 10px;
+            font-weight: 800;
+        }
+        span.title {
+            font-size: 90px;
+            font-weight: 800;
+            opacity: 1;
+            color: #fff;
+        }
+    }
+}
+.menu-contacts {
+    display: flex;
+}
+.menu-contacts-col {
+    position: relative;
+
+    &::before {
+        content: '';
+        min-height: 0px;
+        width: 1px;
+        background-color: #fff;
+        transition: all .7s;
+        transition-delay: 1.2s;
+        position: absolute;
+        left: -40px;
+        top: -145px;
+        opacity: 0.1;
+    }
+}
+.menu-contacts-office {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+
+    transition: all 0.7s;
+    transition-delay: 1.2s;
+    h4 {
+        font-size: 14px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    a {
+        display: block;
+    }
+}
+.menu-state {
+    position: relative;
+    &.open {
+        & .menu-text {
+            opacity: 0;
+        }
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: 'x';
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 5px;
+        font-size: 13px;
+        transition: all .4s;
+        transition-delay: .4s;
+    }
+
+}
+.menu-text {
+    transition: all .4s;
+    transition-delay: .6s;
+    opacity: 1;
+    position: relative;
+}

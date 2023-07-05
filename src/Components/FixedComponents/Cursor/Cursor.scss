@@ -1,0 +1,41 @@
+.cursor-outer {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #12c2e9;
+    transition: all .08s ease-out;
+    z-index: 99999;
+    pointer-events: none;
+    margin-left: -12px;
+    margin-top: -12px;
+
+    &.hover {
+        opacity: 0;
+    }
+}
+
+.cursor-inner {
+    position: fixed;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #12c2e9;
+    pointer-events: none;
+    z-index: 99999;
+
+    transition: width .3s ease-in-out,
+    height .3s ease-in-out,
+    margin .3s ease-in-out,
+    opacity .3s ease-in-out;
+
+    &.hover {
+        width: 70px;
+        height: 70px;
+        opacity: 0.3;
+        background: #12c2e9;
+
+        margin-left: -35px;
+        margin-top: -35px;
+    }
+}

@@ -1,0 +1,25 @@
+@import 'src/Assets/css/mixins';
+
+.presentation-link {
+    @include flexCenter;
+    position: fixed;
+    transition: all 0.4s;
+    right: 25px;
+    bottom: 25px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition-delay: 1s;
+    z-index: 1000;
+    overflow: hidden;
+    a {
+        display: block;
+        @include flexCenter;
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,153 @@
+@import 'src/Assets/css/mixins.scss';
+
+.management {
+    @include flexCenter;
+    padding: 40px 0;
+    position: relative;
+}
+.management__inner {
+    @include flexCenter;
+    align-items: flex-start;
+    display: table;
+    max-width: 1200px;
+    padding: 0 20px 0 10px;
+}
+.management__chef {
+    width: 29%;
+    display: table-cell;
+    position: relative;
+    opacity: 0;
+    top: -25px;
+    transition: all 0.8s;
+    img {
+        width: 100%;
+    }
+    &.show {
+        opacity: 1;
+        top: -10px;
+    }
+    padding-right: 20px;
+}
+.management__partners {
+    display: table-cell;
+    vertical-align: top;
+    width: 32%;
+    padding-right: 65px;
+    position: relative;
+    opacity: 0;
+    top: 15px;
+    transition: all 0.8s;
+    &.show {
+        opacity: 1;
+        top: 0;
+    }
+}
+.google-partner {
+    overflow: hidden;
+    img {
+        transform: translate3d(0px, 1px, 0px) scale(1.1);
+        border: none;
+        outline: none;
+        background: #f64f59;
+    }
+}
+.company__description {
+    width: 40%;
+    vertical-align: middle;
+    display: none;
+    &.show {
+        display: table-cell;
+    }
+}
+.partners__information {
+}
+.partners__information--inner {
+    position: relative;
+    z-index: 1;
+    padding: 10px 30px 10px;
+    @include flexCenter;
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+        font-weight: 800;
+        font-size: 70px;
+    }
+
+    h4 {
+        color: #999;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        z-index: -2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        background: #111215;
+        z-index: -2;
+    }
+}
+
+.company__description--inner {
+    @include flexCenter;
+    flex-direction: column;
+    align-items: flex-start;
+    р
+    h2 {
+
+    }
+}
+.char-p {
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 300;
+    display: inline-block;
+}
+.char-h {
+    font-size: 40px;
+    font-weight: 800;
+
+
+}
+.company__description-button {
+    width: 100%;
+    @include flexCenter;
+    margin-top: 30px;
+    padding-top: 10px;
+    position: relative;
+    top: 10px;
+    right: -20px;
+    opacity: 0;
+    animation: show-descr-btn 0.7s linear forwards;
+    animation-delay: 2.5s;
+    & button {
+        width: 200px;
+    }
+}
+
+
+
+@keyframes show-descr-btn {
+    from {
+        top: 35px;
+        opacity: 0;
+    }
+    to {
+        top: 10px;
+        opacity: 1;
+    }
+}
+

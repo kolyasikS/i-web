@@ -1,0 +1,98 @@
+@import 'src/Assets/css/mixins';
+
+.rocket {
+    @include flexCenter;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 20%;
+    img {
+        width: 180px;
+    }
+    position: relative;
+}
+.rocket-container {
+    transition: all 5s;
+    &.launched {
+        transform: translate(0px, -5600px);
+        .flame-wrapper {
+            opacity: 1;
+        }
+    }
+}
+.rocket-img {
+    position: relative;
+    right: -10px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.rocket-btn {
+
+    border: none;
+    font-size: 15px;
+    padding: 0;
+    &:hover {
+        a {
+            padding-right: 40px;
+            padding-left: 40px;
+            width: 200px;
+        }
+    }
+    a {
+        padding: 10px 24px;
+        display: block;
+    }
+}
+
+.flame-wrapper {
+    position: absolute;
+    left: 54%;
+    transform: scaleY(-1) translateX(-40px);
+    bottom: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.flame-anim {
+    position: relative;
+}
+.flame {
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(-45deg);
+}
+
+/*.red {
+    width: 80px;
+    height: 80px;
+    background: orangered;
+    box-shadow: 0px 0px 10px 5px orangered;
+}*/
+.red {
+    width: 80px;
+    height: 80px;
+    background: orangered;
+    box-shadow: 0px 0px 10px 5px orangered;
+}
+.orange {
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: orange;
+    box-shadow: 0px 0px 12px 6px orange;
+}
+.gold {
+    left: 18px;
+    width: 45px;
+    height: 45px;
+    background: gold;
+    box-shadow: 0px 0px 9px 4px gold;
+}
+.white {
+    left: 22px;
+    width: 35px;
+    height: 35px;
+    background: lightyellow;
+    box-shadow: 0px 0px 9px 4px lightyellow;
+}

@@ -1,0 +1,28 @@
+.carousel {
+    position: relative;
+    max-width: 100%;
+}
+.wrapper {
+    overflow: hidden;
+}
+.inner {
+    display: flex;
+    width: 100%;
+    ul {
+        width: 100%;
+        display: flex;
+    }
+}
+.carousel-btn {
+    position: absolute;
+    cursor: pointer;
+    top: -75px;
+    border: 1px solid rgb(18, 194, 233);
+    color: rgb(18, 194, 233);
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

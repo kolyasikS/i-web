@@ -1,0 +1,193 @@
+@import 'src/Assets/css/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&family=Press+Start+2P&display=swap');
+
+.game {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-family: "Press Start 2P", sans-serif;
+    text-align: center;
+    color: lightgray;
+    background: #18191d;
+    @include flexCenter;
+}
+.game__container {
+    @include flexCenter;
+    width: 900px;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.game-header {
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    padding: 7px 15px;
+    @include flexCenter;
+    justify-content: flex-start;
+}
+.game-circle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+.game__inner {
+    padding: 35px 20px;
+    @include flexCenter;
+    flex-direction: column;
+}
+.game-warning {
+    padding: 0 40px;
+    font-size: 18px;
+}
+.game-clue {
+    font-size: 25px;
+}
+.playground-wrapper {
+    width: 75%;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+.game-over {
+    background: rgba(255, 255, 255, 0.75);
+    @include flexCenter;
+    flex-direction: column;
+    color: black;
+    letter-spacing: 10px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-weight: 400;
+
+    top: 0;
+    cursor: pointer;
+}
+.playground-play-icon {
+    display: block;
+    background: black;
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
+    transform: translateX(-5px);
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.playground {
+    width: 100%;
+    max-width: 640px;
+    height: 120px;
+    margin: 20px auto;
+    position: relative;
+    background: url("https://contentservice.mc.reyrey.net/image_v1.0.0/?id=d1e72170-699a-58cb-bd16-cffd694ba8b5&637419119749543223"), linear-gradient( to bottom, transparent 55px, #efefef 55px, #efefef 56px, transparent 56px );
+    background-repeat: repeat-x, repeat;
+    background-blend-mode: multiply;
+    overflow: hidden;
+    animation: game 30s linear infinite;
+}
+.dead {
+    animation-play-state: paused !important;
+}
+@keyframes game {
+    0% {
+        background-position-x: -0px;
+    }
+    10% {
+        background-position-x: -100px;
+    }
+    20% {
+        background-position-x: -200px;
+    }
+    30% {
+        background-position-x: -300px;
+    }
+    40% {
+        background-position-x: -400px;
+    }
+    50% {
+        background-position-x: -500px;
+    }
+    60% {
+        background-position-x: -600px;
+    }
+    70% {
+        background-position-x: -700px;
+    }
+    80% {
+        background-position-x: -800px;
+    }
+    90% {
+        background-position-x: -900px;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+.game-car {
+    width: 54px;
+    height: 50px;
+    background: url("https://contentservice.mc.reyrey.net/image_v1.0.0/?id=31ca7c26-f60a-5af4-a660-df1b081ed34a&637418252297279612");
+    position: absolute;
+    left: 25px;
+    top: 11px;
+}
+.game-car.up {
+    background: url("https://contentservice.mc.reyrey.net/image_v1.0.0/?id=cf4ccdf0-58c2-5144-aecb-193947240b00&637418252026768676")
+}
+.game-score {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    span {
+        display: inline-block;
+    }
+}
+.game-stone {
+    width: 30px;
+    background: lightgray;
+    clip-path: polygon(100% 100%, 0% 100%, 10% 19.1443%, 33% 20.7458%, 66% 14.8865%, 90% 34.4887%);
+    //left: 63.9875px;
+    height: 15px;
+    position: absolute;
+    top: 65px;
+    //left: 640px;
+    right: 100%;
+    font-size: 12px;
+    animation: stone 2.5s linear;
+
+}
+@keyframes stone {
+    0% {
+        right: -10%;
+    }
+    10% {
+        right: 1%;
+    }
+    20% {
+        right: 12%;
+    }
+    30% {
+        right: 23%;
+    }
+    40% {
+        right: 34%;
+    }
+    50% {
+        right: 45%;
+    }
+    60% {
+        right: 56%;
+    }
+    70% {
+        right: 67%;
+    }
+    80% {
+        right: 78%;
+    }
+    90% {
+        right: 89%;
+    }
+    100% {
+        right: 100%;
+    }
+}

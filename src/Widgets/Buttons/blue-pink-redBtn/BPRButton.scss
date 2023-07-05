@@ -1,0 +1,13 @@
+.button {
+    border: 1px solid #fff;
+    font-weight: 800;
+    background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+    font-size: 16px;
+    max-width: 200px;
+    padding: 10px 50px;
+    transition: 0.3s all;
+    &:hover {
+        background: #2aa7dc;
+        border-color: transparent;
+    }
+}
