@@ -4,7 +4,6 @@ import './Loading.scss';
 const Loading = () => {
     const [isDone, setIsDone] = useState(false);
     const progressBar = useRef();
-    //const firstRender = useRef(1);
     useEffect(() => {
         console.log(progressBar.current);
         let progress = 0;

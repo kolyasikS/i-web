@@ -1,8 +1,8 @@
 import React, {useRef, useState} from 'react';
 import './lastProjects.scss';
-import ProjectCarousel from "../../Widgets/Carousels/ProjectCarousel/ProjectCarousel";
+import ProjectCarousel from "../../../../Widgets/Carousels/ProjectCarousel/ProjectCarousel";
 import projectCarouselItems from '../../StaticData/ProjectsCarouselItems';
-import useObserver from "../../Hooks/useObserver";
+import useObserver from "../../../../Hooks/useObserver";
 import { useInView } from 'react-intersection-observer';
 
 const LastProjects = () => {

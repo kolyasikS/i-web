@@ -1,8 +1,8 @@
 import React, {useRef, useState} from 'react';
 import './Quotes.scss';
-import ProjectCarousel from "../../Widgets/Carousels/ProjectCarousel/ProjectCarousel";
+import ProjectCarousel from "../../../../Widgets/Carousels/ProjectCarousel/ProjectCarousel";
 import quotesCarouselItems from "../../StaticData/QuotesCarouselItems";
-import QuotesCarousel from "../../Widgets/Carousels/QuotesCarousel/QuotesCarousel";
+import QuotesCarousel from "../../../../Widgets/Carousels/QuotesCarousel/QuotesCarousel";
 import {useInView} from "react-intersection-observer";
 
 const Quotes = () => {

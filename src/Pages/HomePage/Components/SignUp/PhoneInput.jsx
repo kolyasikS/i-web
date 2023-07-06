@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
-import CustomInput from "../../Widgets/CustomInput/CustomInput";
-import '../../Widgets/CustomInput/CustomInput.scss';
+import CustomInput from "../../../../Widgets/CustomInput/CustomInput";
+import '../../../../Widgets/CustomInput/CustomInput.scss';
 import InputMask from "react-input-mask";
 import getNewMask from "../../StaticData/PhoneMask";
 

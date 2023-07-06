@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import CustomInput from "../../Widgets/CustomInput/CustomInput";
+import CustomInput from "../../../../Widgets/CustomInput/CustomInput";
 import './SignUp.scss';
-import chefImg from '../../Assets/images/chef.webp';
+import chefImg from '../../../../Assets/images/chef.webp';
 import PhoneInput from "./PhoneInput";
 
 const SignUp = ({open, setOpen}) => {

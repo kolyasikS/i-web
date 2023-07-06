@@ -1,8 +1,8 @@
 import React, {useCallback} from 'react';
-import './styles/index.scss';
+import './Introduction.scss';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import BottomLine from "../../Widgets/Separators/BottomLine";
+import BottomLine from "../../../../Widgets/Separators/BottomLine";
 import {useInView} from "react-intersection-observer";
 
 const Introduction = () => {

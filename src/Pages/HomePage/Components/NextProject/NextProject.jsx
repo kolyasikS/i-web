@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import AnimatedText from "../../AnimatedWidgets/Text/AnimatedText";
-import BPRButton from "../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
+import AnimatedText from "../../../../AnimatedWidgets/Text/AnimatedText";
+import BPRButton from "../../../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
 import './NextProject.scss';
 import {useInView} from "react-intersection-observer";
 import Rocket from "./Rocket";

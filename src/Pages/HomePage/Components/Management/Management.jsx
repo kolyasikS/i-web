@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import BottomLine from "../../Widgets/Separators/BottomLine";
-import BPRButton from "../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
+import BottomLine from "../../../../Widgets/Separators/BottomLine";
+import BPRButton from "../../../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
 import './Management.scss';
-import AnimatedText from "../../AnimatedWidgets/Text/AnimatedText";
+import AnimatedText from "../../../../AnimatedWidgets/Text/AnimatedText";
 import {useInView} from "react-intersection-observer";
-import googlePartnerImg from '../../Assets/images/Partner-CMYK.jpg';
-import chefImg from '../../Assets/images/chef.webp';
+import googlePartnerImg from '../../../../Assets/images/Partner-CMYK.jpg';
+import chefImg from '../../../../Assets/images/chef.webp';
 import SignUp from "../SignUp/SignUp";
 const Management = () => {
     const {ref, inView, entry} = useInView({

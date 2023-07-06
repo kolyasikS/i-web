@@ -23,7 +23,7 @@ const Menu = ({menuVisible}) => {
                             onMouseEnter={() => setActiveOption(1)}
                             onMouseLeave={() => setActiveOption(-1)}
                         >
-                            <a href="">
+                            <a href="/">
                                 <span className={'num'}>01.</span><span className={'title'}>Main</span>
                             </a>
                         </li>
@@ -31,7 +31,7 @@ const Menu = ({menuVisible}) => {
                             onMouseEnter={() => setActiveOption(2)}
                             onMouseLeave={() => setActiveOption(-1)}
                         >
-                            <a href="">
+                            <a href="/useful">
                                 <span className={'num'}>02.</span><span className={'title'}>Useful</span>
                             </a>
                         </li>
@@ -39,7 +39,7 @@ const Menu = ({menuVisible}) => {
                             onMouseEnter={() => setActiveOption(3)}
                             onMouseLeave={() => setActiveOption(-1)}
                         >
-                            <a href="">
+                            <a href="/contact">
                                 <span className={'num'}>03.</span><span className={'title'}>Contacts</span>
                             </a>
                         </li>

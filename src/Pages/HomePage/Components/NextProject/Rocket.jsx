@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BPRButton from "../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
+import BPRButton from "../../../../Widgets/Buttons/blue-pink-redBtn/BPRButton";
 import './Rocket.scss';
 import {createPortal} from "react-dom";
 import SignUp from "../SignUp/SignUp";
@@ -50,7 +50,7 @@ const Rocket = () => {
                        }}
                        onMouseEnter={() => setTopRocket(0)}
                        onMouseExit={() => setTopRocket(-15)}
-            ><a href="#sign-up">Launch rocket</a></BPRButton>
+            ><a href="HomePage/Components/NextProject#sign-up">Launch rocket</a></BPRButton>
         </div>
     );
 };
